@@ -1,6 +1,12 @@
 package id.infinitelearning.KotlinSubmission.exercise4
 
 fun main() {
+    try {
+        val result = divideNumbers(10, 0)
+        println("Result: $result")
+    } catch (e: ArithmeticException) {
+        println("Error: ${e.message}")
+    }
 
 }
     /**
@@ -8,3 +14,7 @@ fun main() {
      *
      */
     // Buat di bawah sini
+
+    fun divideNumbers(dividend: Int, divisor: Int): Int {
+        return dividend / divisor
+    }

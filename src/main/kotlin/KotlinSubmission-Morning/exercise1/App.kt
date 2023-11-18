@@ -10,6 +10,18 @@ Lengkapi fungsi myProfile di bawah ini dengan membuat variabel dengan ketentuan 
 Dan Cetak setiap variabel ke layar saat variable myProfile di panggil
  */
 fun myProfile() {
+    // membuat variabel berikut sesuai ketentuan
+    val name: String = "M. Wiriawan Nasution"
+    val firstName: String = "Muhammad"
+    val lastName: String = "Nasution"
+    val age: Int = 20
+    val isSingle: Boolean = true
+
+    // memanggil setiap variabel ke layar
+    println("Nama Depan: $firstName")
+    println("Nama Belakang: $lastName")
+    println("Umur: $age tahun")
+    println("Status: ${if (isSingle) "Single" else "Not Single"}")
 
 }
 
@@ -19,7 +31,11 @@ fun myProfile() {
  *  Lengkapi fungsi di bawah ini agar dapat mencetak nilai dari parameter-parameter yang ada dengan fungsi println
  */
 fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
-    return ""
+    println("Group ID: $groupId")
+    println("Group Members: $groupMember")
+    println("Session: $session")
+
+    return "Group details printed successfully."
 }
 
 /**
@@ -29,8 +45,10 @@ fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
  *
  */
 fun myTeam(): List<Any> {
+    val groupMembers = listOf("M. Wiriawan Nasution", "Meylia Herde", "Thoriq Ambia", "Vera Romandhon", "Hana Mardini",  "Jero Galih", "Safira Asari", "Adryan Eka", "Amalia", "Fajri Maulana", "Rifka Khairuna")
+    println("List of Group Members: $groupMembers")
 
-    return listOf()
+    return groupMembers
 }
 
 /**
@@ -41,10 +59,10 @@ fun myTeam(): List<Any> {
  *
  */
 fun totalMember(): Int {
-    val mentor = arrayOf<String>()
-    val countOfGroup = arrayOf<String>()
+    val mentor = arrayOf<String>("Reynaldi", "Malik")
+    val countOfGroup = 11
 
-    return 0
+    return mentor.size + countOfGroup
 }
 
 fun main() {
@@ -62,6 +80,6 @@ fun main() {
      *  Ubah nilai argumen-argumen dari fungsi groupDetail di bawah ini sesuai dengan data group kamu
      *
      */
-    groupDetail("", listOf(), "")
+    groupDetail("11", listOf("M. Wiriawan Nasution", "Meylia Herde", "Thoriq Ambia", "Vera Romandhon", "Hana Mardini",  "Jero Galih", "Safira Asari", "Adryan Eka", "Amalia", "Fajri Maulana", "Rifka Khairuna"), "Morning Session")
 
 }
